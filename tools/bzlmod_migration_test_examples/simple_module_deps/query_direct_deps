@@ -1,0 +1,121 @@
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:14:10
+cc_binary(
+  name = "cc_bin",
+  generator_name = "cc_bin",
+  generator_function = "cc_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:14:10",
+  deps = ["//:cc_lib", "@rules_cc//:link_extra_lib"],
+)
+# Rule cc_bin instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:14:10 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/rules_cc/cc/cc_binary.bzl:43:21     in cc_binary
+# Rule cc_binary defined at (most recent call last):
+#   /virtual_builtins_bzl/common/cc/cc_binary.bzl:926:17 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:8:11
+cc_library(
+  name = "cc_lib",
+  visibility = ["//visibility:public"],
+  generator_name = "cc_lib",
+  generator_function = "cc_library",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:8:11",
+  srcs = ["//:test.cc"],
+)
+# Rule cc_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:8:11 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/rules_cc/cc/cc_library.bzl:17:22   in cc_library
+# Rule cc_library defined at (most recent call last):
+#   /virtual_builtins_bzl/common/cc/cc_library.bzl:616:18 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:48:17
+cc_proto_library(
+  name = "cc_proto_lib",
+  deps = ["//:proto_lib"],
+)
+# Rule cc_proto_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:48:17 in <toplevel>
+# Rule cc_proto_library defined at (most recent call last):
+#   /virtual_builtins_bzl/common/cc/cc_proto_library.bzl:276:24 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12
+java_binary(
+  name = "java_bin",
+  generator_name = "java_bin",
+  generator_function = "java_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12",
+  runtime_deps = ["//:java_lib"],
+  launcher = "@bazel_tools//tools/jdk:launcher_flag_alias",
+  main_class = "Test",
+)
+# Rule java_bin instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12   in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/rules_java/java/java_binary.bzl:26:23 in java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_wrapper.bzl:35:42                                                                       in java_binary
+#   /virtual_builtins_bzl/common/java/java_binary_wrapper.bzl:53:18                                                                            in register_legacy_java_binary_rules
+# Rule java_binary defined at (most recent call last):
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:332:31 in <toplevel>
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:320:29 in make_java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:278:16 in _make_binary_rule
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12
+deploy_jars(
+  name = "java_bin_deployjars_internal_rule",
+  tags = ["manual"],
+  generator_name = "java_bin",
+  generator_function = "java_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12",
+  binary = "//:java_bin",
+)
+# Rule java_bin_deployjars_internal_rule instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:25:12   in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/rules_java/java/java_binary.bzl:26:23 in java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_wrapper.bzl:35:42                                                                       in java_binary
+#   /virtual_builtins_bzl/common/java/java_binary_wrapper.bzl:70:25                                                                            in register_legacy_java_binary_rules
+# Rule deploy_jars defined at (most recent call last):
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_deploy_jar.bzl:61:36 in <toplevel>
+#   /virtual_builtins_bzl/common/java/java_binary_deploy_jar.bzl:274:16     in make_deploy_jars_rule
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:19:13
+java_library(
+  name = "java_lib",
+  visibility = ["//visibility:public"],
+  generator_name = "java_lib",
+  generator_function = "java_library",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:19:13",
+  srcs = ["//:Test.java"],
+)
+# Rule java_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:19:13    in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/rules_java/java/java_library.bzl:26:24 in java_library
+# Rule java_library defined at (most recent call last):
+#   /virtual_builtins_bzl/common/java/java_library.bzl:201:39 in <toplevel>
+#   /virtual_builtins_bzl/common/java/java_library.bzl:185:16 in _make_java_library_rule
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:43:14
+proto_library(
+  name = "proto_lib",
+  srcs = ["//:test.proto"],
+)
+# Rule proto_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:43:14 in <toplevel>
+# Rule proto_library defined at (most recent call last):
+#   /virtual_builtins_bzl/common/proto/proto_library.bzl:234:21 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:31:12
+bzl_library(
+  name = "rules-java-docs",
+  srcs = ["@rules_java//java:defs.bzl"],
+  deps = ["@bazel_gazelle//:def"],
+)
+# Rule rules-java-docs instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:31:12 in <toplevel>
+# Rule bzl_library defined at (most recent call last):
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/9607fdac860c2bcc6584bac950f90daa/external/bazel_skylib/bzl_library.bzl:45:19 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:41:11
+sh_library(
+  name = "sh_lib",
+)
+# Rule sh_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/simple_module_deps/BUILD:41:11 in <toplevel>
+

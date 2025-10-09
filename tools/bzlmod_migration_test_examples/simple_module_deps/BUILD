@@ -35,7 +35,6 @@ bzl_library(
     ],
     deps = [
         "@bazel_gazelle//:def",
-        "//external:gazelle_bind"
     ]
 )
 

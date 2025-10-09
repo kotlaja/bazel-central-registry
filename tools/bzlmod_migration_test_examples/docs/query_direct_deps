@@ -1,0 +1,109 @@
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8
+sh_binary(
+  name = "gazelle",
+  tags = ["manual"],
+  generator_name = "gazelle",
+  generator_function = "gazelle",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8",
+  deps = ["@bazel_tools//tools/bash/runfiles:runfiles"],
+  data = [],
+  srcs = ["//:gazelle-runner"],
+)
+# Rule gazelle instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8          in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/bazel_gazelle/def.bzl:189:21 in gazelle
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8
+_gazelle_runner(
+  name = "gazelle-runner",
+  tags = ["manual"],
+  generator_name = "gazelle",
+  generator_function = "gazelle",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8",
+)
+# Rule gazelle-runner instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:8:8          in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/bazel_gazelle/def.bzl:184:20 in gazelle
+# Rule _gazelle_runner defined at (most recent call last):
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/bazel_gazelle/def.bzl:126:23 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:9:10
+go_binary(
+  name = "go_bin",
+  generator_name = "go_bin",
+  generator_function = "go_binary_macro",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:9:10",
+  srcs = ["//:test.go"],
+  deps = ["@org_golang_x_net//context:context"],
+)
+# Rule go_bin instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:9:10                                  in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/io_bazel_rules_go/go/private/rules/wrappers.bzl:64:18 in go_binary_macro
+# Rule go_binary defined at (most recent call last):
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/io_bazel_rules_go/go/private/rules/binary.bzl:429:17 in <toplevel>
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12
+java_binary(
+  name = "px_deps_bin",
+  generator_name = "px_deps_bin",
+  generator_function = "java_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12",
+  runtime_deps = ["@px_deps//:org_antlr_antlr4"],
+  launcher = "@bazel_tools//tools/jdk:launcher_flag_alias",
+  main_class = "org.antlr.v4.Tool",
+)
+# Rule px_deps_bin instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12                 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_java/java/java_binary.bzl:28:23 in java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_wrapper.bzl:35:42                                                                       in java_binary
+#   /virtual_builtins_bzl/common/java/java_binary_wrapper.bzl:53:18                                                                            in register_legacy_java_binary_rules
+# Rule java_binary defined at (most recent call last):
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:332:31 in <toplevel>
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:320:29 in make_java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary.bzl:278:16 in _make_binary_rule
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12
+deploy_jars(
+  name = "px_deps_bin_deployjars_internal_rule",
+  tags = ["manual"],
+  generator_name = "px_deps_bin",
+  generator_function = "java_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12",
+  binary = "//:px_deps_bin",
+)
+# Rule px_deps_bin_deployjars_internal_rule instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:30:12                 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_java/java/java_binary.bzl:28:23 in java_binary
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_wrapper.bzl:35:42                                                                       in java_binary
+#   /virtual_builtins_bzl/common/java/java_binary_wrapper.bzl:70:25                                                                            in register_legacy_java_binary_rules
+# Rule deploy_jars defined at (most recent call last):
+#   /virtual_builtins_bzl/bazel/java/bazel_java_binary_deploy_jar.bzl:61:36 in <toplevel>
+#   /virtual_builtins_bzl/common/java/java_binary_deploy_jar.bzl:274:16     in make_deploy_jars_rule
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:18:10
+py_binary(
+  name = "py_bin",
+  generator_name = "py_bin",
+  generator_function = "py_binary",
+  generator_location = "/usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:18:10",
+  toolchains = ["@rules_python//python:current_py_toolchain"],
+  deps = ["@my_python_deps//numpy:numpy"],
+  srcs = ["//:py_bin.py"],
+)
+# Rule py_bin instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:18:10                                 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/py_binary.bzl:45:20               in py_binary
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_macro.bzl:20:20 in py_binary
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_macro.bzl:24:12 in py_binary_macro
+# Rule py_binary defined at (most recent call last):
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_rule.bzl:51:50 in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/rule_builders.bzl:504:44 in lambda
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/rule_builders.bzl:550:16 in _Rule_build
+
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:38:11
+sh_library(
+  name = "sh_lib",
+)
+# Rule sh_lib instantiated at (most recent call last):
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:38:11 in <toplevel>
+
