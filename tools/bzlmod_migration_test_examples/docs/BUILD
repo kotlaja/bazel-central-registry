@@ -32,6 +32,7 @@ java_binary(
     main_class = "org.antlr.v4.Tool",
     runtime_deps = [
         "@px_deps//:org_antlr_antlr4",
+        "@macro_rule",
     ],
 )
 
