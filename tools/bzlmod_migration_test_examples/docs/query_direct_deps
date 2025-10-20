@@ -93,17 +93,17 @@ py_binary(
 # Rule py_bin instantiated at (most recent call last):
 #   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:18:10                                 in <toplevel>
 #   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/py_binary.bzl:45:20               in py_binary
-#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_macro.bzl:20:20 in py_binary
-#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_macro.bzl:24:12 in py_binary_macro
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_macro.bzl:21:19 in py_binary
 # Rule py_binary defined at (most recent call last):
-#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_rule.bzl:51:50 in <toplevel>
-#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/rule_builders.bzl:504:44 in lambda
-#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/rule_builders.bzl:550:16 in _Rule_build
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_binary_rule.bzl:48:35       in <toplevel>
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_executable_bazel.bzl:101:39 in create_executable_rule
+#   /usr/local/google/home/kotlaja/.cache/bazel/_bazel_kotlaja/2582b7ac5cec30526d328691d305d4e4/external/rules_python/python/private/py_executable.bzl:968:16       in create_base_executable_rule
 
-# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:38:11
+# /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:39:11
 sh_library(
   name = "sh_lib",
+  deps = ["@macro_extension//:macro_extension", "@com_github_cockroachdb_cockroach//:crdb_nogo"],
 )
 # Rule sh_lib instantiated at (most recent call last):
-#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:38:11 in <toplevel>
+#   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:39:11 in <toplevel>
 

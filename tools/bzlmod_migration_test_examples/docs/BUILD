@@ -32,8 +32,14 @@ java_binary(
     main_class = "org.antlr.v4.Tool",
     runtime_deps = [
         "@px_deps//:org_antlr_antlr4",
-        "@macro_rule",
     ],
 )
 
-sh_library(name='sh_lib')
+# Repo rule + Module extension
+sh_library(
+    name='sh_lib',
+    deps = [
+        "@macro_extension",
+        "@com_github_cockroachdb_cockroach//:crdb_nogo",
+    ],
+)

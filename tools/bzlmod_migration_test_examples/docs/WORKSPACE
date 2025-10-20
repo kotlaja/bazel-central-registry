@@ -1,6 +1,7 @@
 workspace(name="example")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load(":macro_module_extension.bzl", "macro_module_extension")
 
 http_archive(
     name = "rules_shell",
@@ -106,9 +107,13 @@ maven_install(
     ],
 )
 
-load("@example//:test_repo_rule.bzl", "macro_test_repo_rule")
-macro_test_repo_rule(
-    name = "macro_rule",
+macro_module_extension(
+    name = "macro_extension",
 )
 
-
+http_archive(
+    name = "com_github_cockroachdb_cockroach",
+    sha256 = "6c3568ef244ce6b874694eeeecb83ed4f5d5dff6cf037c952ecde76828a6c502",
+    strip_prefix = "cockroach-22.1.6",
+    url = "https://github.com/cockroachdb/cockroach/archive/v22.1.6.tar.gz",
+)

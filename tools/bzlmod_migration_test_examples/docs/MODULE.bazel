@@ -3,14 +3,15 @@ module(
     version = "",
 )
 
-bazel_dep(name = "rules_java", version = "8.15.2")
-bazel_dep(name = "gazelle", version = "0.45.0", repo_name = "bazel_gazelle")
 bazel_dep(name = "rules_go", version = "0.57.0", repo_name = "io_bazel_rules_go")
-bazel_dep(name = "rules_python", version = "1.6.1")
+bazel_dep(name = "rules_java", version = "8.16.1")
+bazel_dep(name = "gazelle", version = "0.45.0", repo_name = "bazel_gazelle")
+bazel_dep(name = "rules_python", version = "1.6.3")
 bazel_dep(name = "rules_jvm_external", version = "6.8")
 bazel_dep(name = "rules_shell", version = "0.6.1")
 # -- bazel_dep definitions -- #
 
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # -- use_repo_rule statements -- #
 
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
@@ -59,4 +60,15 @@ maven.artifact(
 # -- End of maven artifacts for repo `px_deps` -- #
 # -- End of maven extensions -- #
 
+
+http_archive(
+  name = "com_github_cockroachdb_cockroach",
+  url = "https://github.com/cockroachdb/cockroach/archive/v22.1.6.tar.gz",
+  sha256 = "6c3568ef244ce6b874694eeeecb83ed4f5d5dff6cf037c952ecde76828a6c502",
+  strip_prefix = "cockroach-22.1.6",
+)
 # -- repo definitions -- #
+
+extension_for_macro_module_extension = use_extension("//:extension_for_macro_module_extension.bzl", "extension_for_macro_module_extension")
+use_repo(extension_for_macro_module_extension, "macro_extension")
+# End of extension `extension_for_macro_module_extension`
