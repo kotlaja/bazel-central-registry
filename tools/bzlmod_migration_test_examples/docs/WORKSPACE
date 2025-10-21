@@ -1,7 +1,15 @@
 workspace(name="example")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-load(":macro_module_extension.bzl", "macro_module_extension")
+load(":macro_module_extension.bzl", "my_custom_macro")
+
+http_archive(
+    name = "rules_cc",
+    sha256 = "b8b918a85f9144c01f6cfe0f45e4f2838c7413961a8ff23bc0c6cdf8bb07a3b6",
+    strip_prefix = "rules_cc-0.1.5",
+    urls = ["https://github.com/bazelbuild/rules_cc/releases/download/0.1.5/rules_cc-0.1.5.tar.gz"],
+)
+
 
 http_archive(
     name = "rules_shell",
@@ -77,24 +85,20 @@ python_register_toolchains(
 # Maven dependencies
 # __________________
 
+RULES_JVM_EXTERNAL_TAG = "4.5"
+RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
+
 http_archive(
     name = "rules_jvm_external",
-    sha256 = "23fe83890a77ac1a3ee143e2306ec12da4a845285b14ea13cb0df1b1e23658fe",
-    strip_prefix = "rules_jvm_external-4.3",
-    urls = ["https://github.com/bazelbuild/rules_jvm_external/archive/refs/tags/4.3.tar.gz"],
+    strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
+    sha256 = RULES_JVM_EXTERNAL_SHA,
+    url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
 )
 
-http_archive(
-    name = "remote_java_tools",
-    sha256 = "d8b126078705e91677db67b05f7b25ad6fa8865949e2dd38ff85e0553bfb0be2",
-    urls = [
-        "https://mirror.bazel.build/bazel_java_tools/releases/java/v16.0/java_tools-v16.0.zip",
-        "https://github.com/bazelbuild/java_tools/releases/download/java_v16.0/java_tools-v16.0.zip",
-    ],
-)
-
-load("@com_google_protobuf//bazel/private:proto_bazel_features.bzl", "proto_bazel_features")
-proto_bazel_features(name = "proto_bazel_features")
+load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
+rules_jvm_external_deps()
+load("@rules_jvm_external//:setup.bzl", "rules_jvm_external_setup")
+rules_jvm_external_setup()
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
@@ -107,8 +111,8 @@ maven_install(
     ],
 )
 
-macro_module_extension(
-    name = "macro_extension",
+my_custom_macro(
+    name = "my_custom_repo",
 )
 
 http_archive(

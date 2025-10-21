@@ -5,7 +5,7 @@ def _test_repo_rule_impl(repository_ctx):
         "BUILD",
         content = """
 genrule(
-    name = "macro_extension",
+    name = "foo",
     outs = ["rule_name.out"],
     cmd = "touch $@",
     visibility = ["//visibility:public"],
@@ -17,5 +17,5 @@ _test_repo_rule = repository_rule(
     implementation = _test_repo_rule_impl,
 )
 
-def macro_module_extension(name):
+def my_custom_macro(name):
     _test_repo_rule(name = name)

@@ -39,7 +39,7 @@ java_binary(
 sh_library(
     name='sh_lib',
     deps = [
-        "@macro_extension",
+        "@my_custom_repo//:foo",
         "@com_github_cockroachdb_cockroach//:crdb_nogo",
     ],
 )

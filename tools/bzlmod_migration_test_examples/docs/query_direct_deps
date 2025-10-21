@@ -102,7 +102,7 @@ py_binary(
 # /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:39:11
 sh_library(
   name = "sh_lib",
-  deps = ["@macro_extension//:macro_extension", "@com_github_cockroachdb_cockroach//:crdb_nogo"],
+  deps = ["@my_custom_repo//:foo", "@com_github_cockroachdb_cockroach//:crdb_nogo"],
 )
 # Rule sh_lib instantiated at (most recent call last):
 #   /usr/local/google/home/kotlaja/migration_tool/bazel-central-registry/tools/bzlmod_migration_test_examples/docs/BUILD:39:11 in <toplevel>
